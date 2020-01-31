@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c448962-342f-4743-a1e0-76bbd12a074f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/webserver/dat/sem2/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webserver/dat/sem2/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pages/shop/lamborgini.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -131,14 +131,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Modul1Network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Modul1NetworkHTTP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -180,12 +172,12 @@
       <workItem from="1580463505213" duration="81000" />
       <workItem from="1580463593526" duration="143000" />
       <workItem from="1580463749852" duration="70000" />
-      <workItem from="1580476869738" duration="643000" />
+      <workItem from="1580476869738" duration="835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="937000" />
+    <option name="totallyTimeSpent" value="1129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
@@ -226,9 +218,12 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/pages/shop/lamborgini.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/webserver/dat/sem2/ServerMain.java">
       <provider selected="true" editor-type-id="text-editor">
