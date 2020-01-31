@@ -67,7 +67,7 @@ public class ServerMain {
     }
 
     /*
-    This server uses a HttpRequest object to *parse* the text-request into a 
+    This server uses a HttpRequest object to *parse* the text-request into a
     java object we can then use to examine the different aspect of the request
     using the getters of the HttpRequest object.
     It still just returns the date to the client.
@@ -92,7 +92,7 @@ public class ServerMain {
                 for ( Entry e : req.getHeaders().entrySet() ) {
                     System.out.println( "    " + e.getKey() + ": " + e.getValue() );
                 }
-                
+
 
                 System.out.println( "---- BODY ----" );
                 System.out.println( req.getBody() );
