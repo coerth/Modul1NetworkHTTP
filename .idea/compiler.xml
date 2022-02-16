@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Modul1Network" />
         <module name="Modul1NetworkHTTPtorsdag" />
+        <module name="Modul1NetworkHTTP" />
       </profile>
     </annotationProcessing>
   </component>

@@ -2,7 +2,9 @@ package webserver.dat.sem2;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.BindException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URL;
@@ -18,7 +20,7 @@ import java.util.Map.Entry;
 public class ServerMain {
 
     public static void main( String[] args ) throws Exception {
-        picoServer06();
+        picoServer05();
     }
 
     /*
@@ -44,8 +46,21 @@ public class ServerMain {
     It still just tell the browser what time it is.
      */
     private static void picoServer02() throws Exception {
-        final ServerSocket server = new ServerSocket( 8080 );
-        System.out.println( "Listening for connection on port 8080 ...." );
+        ServerSocket server;
+        int portNumber = 8080;
+
+        while(true)
+        {
+        try {
+            server = new ServerSocket( portNumber );
+            break;
+
+        } catch (BindException e) {
+            portNumber++;
+        }
+        }
+
+        System.out.println( "Listening for connection on port "+ portNumber );
         while ( true ) { // keep listening (as is normal for a server)
             try ( Socket socket = server.accept() ) {
                 System.out.println( "-----------------" );
@@ -58,7 +73,7 @@ public class ServerMain {
                 }
                 System.out.println( ">>>>>>>>>>>>>>>" );
                 Date today = new Date();
-                String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today;
+                String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today + "\n Denis din flotte mand";
                 socket.getOutputStream().write( httpResponse.getBytes( "UTF-8" ) );
                 System.out.println( "<<<<<<<<<<<<<<<<<" );
             }
@@ -182,6 +197,9 @@ public class ServerMain {
                         case "/addournumbers":
                             res = addOurNumbers( req );
                             break;
+                        case "/multiplyournumbers":
+                            res = multiplyOurNumbers(req);
+                            break;
                         default:
                             res = "Unknown path: " + path;
                     }
@@ -212,18 +230,47 @@ public class ServerMain {
         File file = new File( url.getFile() );
         String content = new String( Files.readAllBytes( file.toPath() ) );
         return content;
-
     }
 
-    private static String addOurNumbers( HttpRequest req ) {
+    private static String generateHTML(String file, String a, String b, String c, String operator) throws Exception
+    {
+        String res = getResourceFileContents(file+".tmpl");
+
+        res = res.replace( "$0", a);
+        res = res.replace( "$1", b);
+        res = res.replace( "$2", c);
+        res = res.replace("$op", operator);
+
+        return res;
+    }
+
+    private static String multiplyOurNumbers ( HttpRequest req) throws Exception
+    {
         String first = req.getParameter( "firstnumber" );
         String second = req.getParameter( "secondnumber" );
+
         int fi = Integer.parseInt( first );
         int si = Integer.parseInt( second );
-        String res = RES;
-        res = res.replace( "$0", first);
+        int ti = fi * si;
+
+        String res = generateHTML("result", first, second, String.valueOf(ti), "*" );
+
+        return res;
+    }
+
+    private static String addOurNumbers( HttpRequest req ) throws Exception {
+        String first = req.getParameter( "firstnumber" );
+        String second = req.getParameter( "secondnumber" );
+
+        int fi = Integer.parseInt( first );
+        int si = Integer.parseInt( second );
+        int ti = fi + si;
+
+        String res = generateHTML("result", first, second, String.valueOf(ti), "+" );
+        //String res = getResourceFileContents("result.tmpl");
+       /* res = res.replace( "$0", first);
         res = res.replace( "$1", second);
-        res = res.replace( "$2", String.valueOf( fi+si ) );
+        res = res.replace( "$2", String.valueOf( fi+si ) );*/
         return res;
     }
 
