@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3c448962-342f-4743-a1e0-76bbd12a074f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/webserver/dat/sem2/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webserver/dat/sem2/ServerMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/pages/fredag.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pages/fredag.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,6 +126,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -168,7 +168,7 @@
       <workItem from="1644825942497" duration="10568000" />
       <workItem from="1644914781649" duration="12237000" />
       <workItem from="1645027305922" duration="633000" />
-      <workItem from="1645082237748" duration="12519000" />
+      <workItem from="1645082237748" duration="13233000" />
     </task>
     <servers />
   </component>
@@ -221,6 +221,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
