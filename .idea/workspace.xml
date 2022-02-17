@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c448962-342f-4743-a1e0-76bbd12a074f" name="Default Changelist" comment="" />
+    <list default="true" id="3c448962-342f-4743-a1e0-76bbd12a074f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/webserver/dat/sem2/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webserver/dat/sem2/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pages/fredag.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pages/fredag.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +141,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Morten\Documents\GitHub\Repos\netvaerk\Modul1NetworkHTTP\src\main\resources" />
+      <recent name="C:\Users\mbend\Documents\GitHub\Repos\netvaerk\Modul1NetworkHTTP\src\main\resources\pages\images" />
+      <recent name="C:\Users\mbend\Documents\GitHub\Repos\netvaerk\Modul1NetworkHTTP\src\main\resources\pages" />
+      <recent name="C:\Users\mbend\Documents\GitHub\Repos\netvaerk\Modul1NetworkHTTP\src\main\image" />
+      <recent name="C:\Users\mbend\Documents\GitHub\Repos\netvaerk\Modul1NetworkHTTP\src\main" />
+      <recent name="C:\Users\mbend\Documents\GitHub\Repos\netvaerk\Modul1NetworkHTTP\src\main\java\image" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ServerMain" />
@@ -160,6 +168,7 @@
       <workItem from="1644825942497" duration="10568000" />
       <workItem from="1644914781649" duration="12237000" />
       <workItem from="1645027305922" duration="633000" />
+      <workItem from="1645082237748" duration="12519000" />
     </task>
     <servers />
   </component>

@@ -20,7 +20,7 @@ import java.util.Map.Entry;
 public class ServerMain {
 
     public static void main( String[] args ) throws Exception {
-        picoServer05();
+        picoServer06();
     }
 
     /*
@@ -187,7 +187,7 @@ public class ServerMain {
                 System.out.println( "---- reqno: " + count + " ----" );
                 HttpRequest req = new HttpRequest( socket.getInputStream() );
                 String path = req.getPath();
-                if ( path.endsWith( ".html" ) || path.endsWith( ".txt" ) ) {
+                if ( path.endsWith( ".html" ) || path.endsWith( ".txt" ) || path.endsWith(".jpg")) {
                     String html = getResourceFileContents( root+path );
                     String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + html;
                     socket.getOutputStream().write( httpResponse.getBytes( "UTF-8" ) );
@@ -230,6 +230,22 @@ public class ServerMain {
         File file = new File( url.getFile() );
         String content = new String( Files.readAllBytes( file.toPath() ) );
         return content;
+    }
+
+    private static String generateHTML(String... values) throws Exception
+    {
+        String res = getResourceFileContents(values[0]+".tmpl");
+
+        if(values.length > 1 )
+        {
+            for(int i = 1; i < values.length; i++)
+            {
+                res = res.replace("$"+i, values[i]);
+            }
+
+        }
+
+        return res;
     }
 
     private static String generateHTML(String file, String a, String b, String c, String operator) throws Exception
